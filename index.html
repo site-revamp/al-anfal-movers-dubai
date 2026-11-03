@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#911A1D">
+<meta name="description" content="Anfal Movers provides home relocation, office moving, furniture packing and storage services across the UAE.">
+<title>Anfal Movers | Moving & Relocation Services UAE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #911A1D;
+  --primary-dark: #741417;
+  --primary-light: #F8EDEF;
+  --secondary: #17191B;
+  --heading: #241012;
+  --body: #526171;
+  --muted: #77818D;
+  --white: #FFFFFF;
+  --background: #FBF8F7;
+  --border: #E9DDDE;
+  --gold: #C69A5B;
+  --radius: 18px;
+  --shadow: 0 18px 55px rgba(36,16,18,.09);
+  --container: 1160px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--heading);
+  background: var(--white);
+  line-height: 1.65;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button, input, select, textarea { font: inherit; }
+
+.container {
+  width: min(var(--container), calc(100% - 44px));
+  margin: auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+  margin: 0;
+}
+
+h1 { font-size: clamp(42px, 6vw, 78px); }
+h2 { font-size: clamp(32px, 4vw, 52px); }
+h3 { font-size: 21px; }
+
+p { color: var(--body); margin: 0; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.section { padding: 100px 0; }
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  margin: 15px 0;
+}
+
+.section-heading p { max-width: 610px; }
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(145,26,29,.2);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(36,16,18,.2);
+  color: var(--heading);
+}
+
+.btn-outline:hover {
+  background: var(--heading);
+  color: white;
+}
+
+/* TOP BAR */
+
+.topbar {
+  background: var(--secondary);
+  color: rgba(255,255,255,.8);
+  font-size: 12px;
+}
+
+.topbar-inner {
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar a {
+  color: white;
+  font-weight: 700;
+}
+
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #eee;
+}
+
+.nav-wrap {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: white;
+  border-radius: 13px 13px 13px 4px;
+}
+
+.brand-mark svg { width: 27px; }
+
+.brand small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 650;
+  color: #514448;
+  transition: .2s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 95px 0;
+  background: var(--background);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  right: -180px;
+  top: -260px;
+  border: 1px solid rgba(145,26,29,.12);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(145,26,29,.025),
+    0 0 0 110px rgba(145,26,29,.02);
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.hero-copy h1 { margin: 20px 0; }
+
+.hero-copy h1 span { color: var(--primary); }
+
+.hero-copy p {
+  max-width: 590px;
+  font-size: 17px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.note-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.hero-art {
+  position: relative;
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+}
+
+.art-panel {
+  position: relative;
+  width: 100%;
+  max-width: 465px;
+  height: 390px;
+  padding: 28px;
+  overflow: hidden;
+  border-radius: 32px;
+  background: var(--primary);
+  box-shadow: 0 30px 70px rgba(91,15,20,.22);
+}
+
+.art-label {
+  position: relative;
+  z-index: 2;
+  color: rgba(255,255,255,.8);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.art-illustration {
+  position: absolute;
+  inset: 55px 15px 10px;
+  display: grid;
+  place-items: center;
+}
+
+.art-illustration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.floating-card {
+  position: absolute;
+  right: -15px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.floating-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.floating-card strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+
+.floating-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* QUICK FACTS */
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.fact {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.fact + .fact { border-left: 1px solid var(--border); }
+
+.fact-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 13px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.fact strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.fact span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* SERVICES */
+
+.services { background: white; }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.service-card {
+  padding: 28px;
+  min-height: 250px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: .25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(145,26,29,.35);
+  box-shadow: var(--shadow);
+}
+
+.service-icon {
+  width: 57px;
+  height: 57px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 23px;
+  border-radius: 17px;
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.service-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.service-card h3 { margin-bottom: 12px; }
+
+.service-card p { font-size: 14px; }
+
+.service-link {
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* RESIDENTIAL / COMMERCIAL */
+
+.pathways { background: var(--background); }
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pathway {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: 38px;
+  border-radius: 25px;
+  background: var(--secondary);
+  color: white;
+}
+
+.pathway:nth-child(2) { background: var(--primary); }
+
+.pathway-number {
+  color: rgba(255,255,255,.6);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.pathway h3 {
+  max-width: 350px;
+  margin: 18px 0 14px;
+  font-size: 29px;
+}
+
+.pathway p {
+  max-width: 420px;
+  color: rgba(255,255,255,.75);
+  font-size: 14px;
+}
+
+.pathway a {
+  display: inline-flex;
+  margin-top: 25px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255,255,255,.6);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* MOVING PREPARATION */
+
+.support-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.support-copy h2 { margin: 16px 0; }
+
+.support-copy p { margin-bottom: 25px; }
+
+.support-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.support-item {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.check {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.support-item strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+
+.support-item small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* PROCESS */
+
+.process { background: var(--background); }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+  counter-reset: steps;
+}
+
+.process-card {
+  padding: 25px 22px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: white;
+  counter-increment: steps;
+}
+
+.process-card::before {
+  content: "0" counter(steps);
+  display: block;
+  margin-bottom: 28px;
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.process-card h3 {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.process-card p { font-size: 13px; }
+
+/* COVERAGE */
+
+.coverage-panel {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 45px;
+  border-radius: 25px;
+  background: var(--background);
+}
+
+.coverage-panel h2 { margin: 15px 0; }
+
+.location-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.location-tags span {
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  background: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* CONTACT */
+
+.quote {
+  background: var(--secondary);
+  color: white;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.quote-copy .eyebrow { color: #E6B4B5; }
+
+.quote-copy h2 {
+  margin: 16px 0;
+  color: white;
+}
+
+.quote-copy p { color: rgba(255,255,255,.7); }
+
+.contact-lines {
+  display: grid;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: white;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255,255,255,.1);
+}
+
+.quote-form {
+  padding: 35px;
+  border-radius: 22px;
+  background: white;
+  color: var(--heading);
+}
+
+.quote-form h3 {
+  margin-bottom: 8px;
+  font-size: 25px;
+}
+
+.quote-form > p {
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field.full { grid-column: 1 / -1; }
+
+.field label {
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #FFFCFC;
+  color: var(--heading);
+  font-size: 13px;
+}
+
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-disclaimer {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* FAQ */
+
+.faq { background: var(--background); }
+
+.faq-list {
+  max-width: 850px;
+  display: grid;
+  gap: 12px;
+}
+
+details {
+  padding: 20px 23px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: white;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+  content: "+";
+  color: var(--primary);
+  font-size: 22px;
+}
+
+details[open] summary::after { content: "−"; }
+
+details p {
+  padding-top: 14px;
+  font-size: 13px;
+}
+
+/* CTA */
+
+.final-cta {
+  padding: 65px 0;
+  background: var(--primary);
+  color: white;
+}
+
+.final-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.final-cta h2 { font-size: 38px; }
+
+.final-cta p {
+  margin-top: 10px;
+  color: rgba(255,255,255,.8);
+}
+
+.btn-light {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-light:hover {
+  background: #F8EDEF;
+  color: var(--primary-dark);
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 60px 0 25px;
+  background: #190C0E;
+  color: white;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr .9fr;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+.footer-about p {
+  max-width: 360px;
+  margin-top: 17px;
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+}
+
+.footer h4 {
+  margin-bottom: 17px;
+  font-size: 15px;
+}
+
+.footer-links {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,.7);
+  font-size: 13px;
+}
+
+.footer-links a:hover { color: white; }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.13);
+  color: rgba(255,255,255,.5);
+  font-size: 11px;
+}
+
+/* MOBILE STICKY CONTACT */
+
+.mobile-sticky { display: none; }
+
+@media (max-width: 980px) {
+  .nav-links { gap: 15px; }
+  .nav-links a { font-size: 12px; }
+  .nav-wrap > .btn { display: none; }
+  .hero-grid { gap: 30px; }
+  .support-grid, .quote-grid { gap: 35px; }
+}
+
+@media (max-width: 760px) {
+  body { padding-bottom: 75px; }
+
+  .container { width: calc(100% - 34px); }
+
+  .topbar-inner { justify-content: center; }
+  .topbar-inner span:first-child { display: none; }
+
+  .nav-wrap { min-height: 72px; }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 72px;
+    padding: 15px 22px 20px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 15px 25px rgba(36,16,18,.08);
+  }
+
+  .nav-links.open {
+    display: grid;
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid #F2E9E9;
+    font-size: 14px;
+  }
+
+  .hero { padding: 65px 0 55px; }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-copy h1 { font-size: clamp(42px, 12vw, 65px); }
+
+  .hero-copy p { font-size: 15px; }
+
+  .hero-art { min-height: 330px; }
+
+  .art-panel {
+    height: 310px;
+    width: calc(100% - 15px);
+  }
+
+  .floating-card {
+    right: 0;
+    bottom: 8px;
+  }
+
+  .facts-grid { grid-template-columns: 1fr; }
+
+  .fact { padding: 17px 20px; }
+
+  .fact + .fact {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .section { padding: 72px 0; }
+
+  .section-heading { margin-bottom: 30px; }
+
+  .service-grid {
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+  }
+
+  .service-card {
+    padding: 20px;
+    min-height: 240px;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 17px;
+  }
+
+  .service-card h3 { font-size: 17px; }
+
+  .service-card p { font-size: 12px; }
+
+  .pathway-grid,
+  .support-grid,
+  .coverage-panel,
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway {
+    min-height: 270px;
+    padding: 29px;
+  }
+
+  .support-list { gap: 10px; }
+
+  .support-item { padding: 14px; }
+
+  .process-grid { grid-template-columns: repeat(2,1fr); }
+
+  .coverage-panel { padding: 28px 22px; }
+
+  .quote-form { padding: 25px 20px; }
+
+  .final-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 22px;
+  }
+
+  .footer-about { grid-column: 1 / -1; }
+
+  .footer-bottom { flex-direction: column; }
+
+  .mobile-sticky {
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.97);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -8px 25px rgba(36,16,18,.08);
+  }
+
+  .mobile-sticky .btn {
+    min-height: 48px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .mobile-sticky .btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: white;
+  }
+}
+
+@media (max-width: 420px) {
+  .service-grid,
+  .process-grid,
+  .support-list,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card { min-height: auto; }
+
+  .field.full { grid-column: auto; }
+
+  .hero-actions .btn { width: 100%; }
+
+  .footer-grid { grid-template-columns: 1fr; }
+
+  .footer-about { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>Moving homes and workplaces across the UAE</span>
+    <span>Speak with our team:
+      <a href="tel:+971542854152">+971 54 285 4152</a>
+    </span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="#home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M4 15.2 16 5l12 10.2v12H4v-12Z"
+            stroke="currentColor" stroke-width="2.2"/>
+          <path d="M12 27V17h8v10"
+            stroke="currentColor" stroke-width="2.2"/>
+        </svg>
+      </span>
+      <span>
+        ANFAL MOVERS
+        <small>MOVE WITH CONFIDENCE</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navigation">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#coverage">Areas</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn">Get a Moving Quote</a>
+
+    <button class="menu-toggle" id="menu-toggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+      <span class="eyebrow">Moving and relocation services</span>
+
+      <h1>
+        A smoother move starts with
+        <span>the right team.</span>
+      </h1>
+
+      <p>
+        From home and villa relocations to office moves, packing and storage,
+        Anfal Movers helps you organise the next step with a clear moving
+        plan across the UAE.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn">
+          Request a Moving Quote →
+        </a>
+
+        <a href="https://wa.me/971542854152"
+           target="_blank" rel="noopener"
+           class="btn btn-outline">
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-note">
+        <span class="note-dot"></span>
+        <span>Tell us your moving date, locations and type of move to get started.</span>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="art-panel">
+        <div class="art-label">Your move, thoughtfully planned</div>
+
+        <div class="art-illustration">
+          <svg viewBox="0 0 460 330" fill="none">
+            <g stroke="white" stroke-width="5"
+               stroke-linecap="round" stroke-linejoin="round">
+              <path d="M65 143 174 54l108 89v124H65V143Z"/>
+              <path d="M145 267v-79h61v79"/>
+              <path d="M282 176 329 137l48 39v91h-95v-91Z"/>
+              <path d="M310 267v-50h37v50"/>
+              <path d="M43 283h365" opacity=".45"/>
+            </g>
+
+            <g fill="white">
+              <rect x="262" y="231" width="61" height="47" rx="5"/>
+              <rect x="326" y="218" width="57" height="60" rx="5"/>
+            </g>
+
+            <g stroke="#911A1D" stroke-width="3">
+              <path d="M292 231v47M354 218v60"/>
+              <path d="M277 231h31M342 218h26"/>
+            </g>
+
+            <path d="M43 302c54-20 107-20 161 0s107 20 161 0"
+              stroke="white" stroke-width="3" opacity=".45"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="floating-card">
+        <span class="floating-icon">✓</span>
+        <span>
+          <strong>Plan your move</strong>
+          <small>Home, office and more</small>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUICK FACTS -->
+<section class="container" style="padding:25px 0;">
+  <div class="facts-grid">
+
+    <div class="fact">
+      <span class="fact-icon">⌂</span>
+      <div>
+        <strong>Home Relocation</strong>
+        <span>Apartments, villas and homes</span>
+      </div>
+    </div>
+
+    <div class="fact">
+      <span class="fact-icon">▦</span>
+      <div>
+        <strong>Office Relocation</strong>
+        <span>Moves for workplaces and teams</span>
+      </div>
+    </div>
+
+    <div class="fact">
+      <span class="fact-icon">□</span>
+      <div>
+        <strong>Packing & Storage</strong>
+        <span>Extra support for your move</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">Our services</span>
+      <h2>Moving support for every stage of your relocation.</h2>
+      <p>
+        Choose the service that matches your move. Our team can discuss
+        your requirements and help you plan the details before moving day.
+      </p>
+    </div>
+
+    <!-- SERVICE ICON ROW 1 -->
+    <div class="service-grid">
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 22 19-16 19 16"/>
+            <path d="M10 19v22h28V19M20 41V27h8v14"/>
+          </svg>
+        </div>
+        <h3>Home Relocation</h3>
+        <p>
+          Organise your move between apartments, villas and family homes
+          with support for your moving requirements.
+        </p>
+        <a class="service-link" href="#contact">Discuss your home move →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="9" width="36" height="30" rx="3"/>
+            <path d="M6 19h36M17 9v10m14-10v10"/>
+            <path d="M14 26h7m6 0h7M14 32h7m6 0h7"/>
+          </svg>
+        </div>
+        <h3>Office Relocation</h3>
+        <p>
+          Plan a workplace move around your office requirements,
+          furniture, equipment and preferred moving schedule.
+        </p>
+        <a class="service-link" href="#contact">Plan an office move →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 20 24 7l19 13v21H5V20Z"/>
+            <path d="M5 20h38M17 41V26h14v15"/>
+          </svg>
+        </div>
+        <h3>Storage Solutions</h3>
+        <p>
+          Ask about storage support when your moving schedule or property
+          arrangements require an additional step.
+        </p>
+        <a class="service-link" href="#contact">Ask about storage →</a>
+      </article>
+
+      <!-- SERVICE ICON ROW 2 -->
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 18 24 9l16 9v21H8V18Z"/>
+            <path d="m8 18 16 9 16-9M24 27v12"/>
+            <path d="m16 14 16 9M32 14 16 23"/>
+          </svg>
+        </div>
+        <h3>Furniture Packing</h3>
+        <p>
+          Arrange packing support to help prepare furniture and household
+          belongings for transportation.
+        </p>
+        <a class="service-link" href="#contact">Discuss packing →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 13h30M14 13v25h20V13"/>
+            <path d="M19 13V8h10v5"/>
+            <path d="M19 20v11m10-11v11"/>
+            <path d="m5 8 4 5 4-5m26 0 4 5 4-5"/>
+          </svg>
+        </div>
+        <h3>Furniture Disassembly</h3>
+        <p>
+          Include furniture dismantling in your moving plan where larger
+          items need preparation before transport.
+        </p>
+        <a class="service-link" href="#contact">Ask about dismantling →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 39h34M11 39V18h26v21"/>
+            <path d="M16 18v-7h16v7"/>
+            <path d="M18 27h12M18 32h12"/>
+          </svg>
+        </div>
+        <h3>Furniture Installation</h3>
+        <p>
+          Discuss furniture reassembly and installation as part of
+          the arrangements for your new space.
+        </p>
+        <a class="service-link" href="#contact">Plan furniture setup →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESIDENTIAL AND COMMERCIAL -->
+<section class="section pathways">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">Choose your move</span>
+      <h2>A clear starting point for homes and businesses.</h2>
+      <p>
+        Different moves need different preparation. Start with the pathway
+        that best describes your requirements.
+      </p>
+    </div>
+
+    <div class="pathway-grid">
+
+      <article class="pathway">
+        <span class="pathway-number">01 / RESIDENTIAL</span>
+        <h3>Moving to a new home?</h3>
+        <p>
+          Tell us about your apartment, villa or household move,
+          including your moving date and locations.
+        </p>
+        <a href="#contact">Request a home moving quote →</a>
+      </article>
+
+      <article class="pathway">
+        <span class="pathway-number">02 / COMMERCIAL</span>
+        <h3>Planning an office move?</h3>
+        <p>
+          Share your workplace relocation details so the move can be
+          discussed around your furniture, equipment and schedule.
+        </p>
+        <a href="#contact">Discuss an office relocation →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MOVING PREPARATION -->
+<section class="section">
+  <div class="container support-grid">
+
+    <div class="support-copy">
+      <span class="eyebrow">More than transportation</span>
+      <h2>Plan the details before moving day.</h2>
+      <p>
+        A relocation involves more than getting belongings from one
+        address to another. Make room in your plan for packing,
+        furniture preparation, storage needs and arrangements at
+        both locations.
+      </p>
+      <a href="#contact" class="btn">Talk Through Your Move →</a>
+    </div>
+
+    <div class="support-list">
+
+      <div class="support-item">
+        <span class="check">✓</span>
+        <div>
+          <strong>Moving date</strong>
+          <small>Share your preferred date or timeframe.</small>
+        </div>
+      </div>
+
+      <div class="support-item">
+        <span class="check">✓</span>
+        <div>
+          <strong>Move locations</strong>
+          <small>Let the team know your origin and destination.</small>
+        </div>
+      </div>
+
+      <div class="support-item">
+        <span class="check">✓</span>
+        <div>
+          <strong>Property details</strong>
+          <small>Describe the home, office or property involved.</small>
+        </div>
+      </div>
+
+      <div class="support-item">
+        <span class="check">✓</span>
+        <div>
+          <strong>Additional services</strong>
+          <small>Mention packing, storage or furniture handling.</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="process">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps to get your move organised.</h2>
+      <p>
+        Start with the information you have. The team can discuss
+        the details and next steps with you.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <article class="process-card">
+        <h3>Share Your Details</h3>
+        <p>
+          Provide your moving date, locations, move type and a brief
+          description of what needs to be moved.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <h3>Discuss Requirements</h3>
+        <p>
+          Talk through the property, belongings and any packing,
+          storage or furniture support you may need.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <h3>Review the Plan</h3>
+        <p>
+          Clarify the moving arrangements and quotation details
+          with the team before confirming your move.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <h3>Prepare for Moving Day</h3>
+        <p>
+          Follow the agreed arrangements and keep communication
+          open if any details change.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="section coverage" id="coverage">
+  <div class="container">
+
+    <div class="coverage-panel">
+
+      <div>
+        <span class="eyebrow">UAE service coverage</span>
+        <h2>Moving across key locations in the UAE.</h2>
+        <p>
+          Anfal Movers lists service coverage across these UAE locations.
+          Contact the team to discuss your exact pickup and delivery addresses.
+        </p>
+      </div>
+
+      <div class="location-tags">
+        <span>Dubai</span>
+        <span>Abu Dhabi</span>
+        <span>Ajman</span>
+        <span>Ras Al Khaimah</span>
+        <span>Al Ain</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="section quote" id="contact">
+  <div class="container quote-grid">
+
+    <div class="quote-copy">
+      <span class="eyebrow">Start your enquiry</span>
+      <h2>Tell us where you're moving.</h2>
+      <p>
+        Share a few details about your move. This form prepares an enquiry
+        in WhatsApp so you can review the information and send it directly
+        to the Anfal Movers team.
+      </p>
+
+      <div class="contact-lines">
+
+        <a class="contact-line" href="tel:+971542854152">
+          <span class="contact-icon">☎</span>
+          +971 54 285 4152
+        </a>
+
+        <a class="contact-line"
+           href="https://wa.me/971542854152"
+           target="_blank" rel="noopener">
+          <span class="contact-icon">◉</span>
+          Chat with us on WhatsApp
+        </a>
+
+        <a class="contact-line" href="mailto:info@anfalmovers.com">
+          <span class="contact-icon">✉</span>
+          info@anfalmovers.com
+        </a>
+
+      </div>
+    </div>
+
+    <form class="quote-form" id="quote-form">
+
+      <h3>Request a Moving Quote</h3>
+      <p>Complete the details below to prepare your WhatsApp enquiry.</p>
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">Your Name *</label>
+          <input id="name" name="name" required placeholder="Full name">
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" required placeholder="Contact number">
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+        </div>
+
+        <div class="field">
+          <label for="date">Preferred Moving Date</label>
+          <input id="date" name="date" type="date">
+        </div>
+
+        <div class="field">
+          <label for="type">Type of Move *</label>
+          <select id="type" name="type" required>
+            <option value="">Choose a move type</option>
+            <option>Home Relocation</option>
+            <option>Villa Relocation</option>
+            <option>Apartment Relocation</option>
+            <option>Office Relocation</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="extra">Additional Support</label>
+          <select id="extra" name="extra">
+            <option>Not specified</option>
+            <option>Packing</option>
+            <option>Storage</option>
+            <option>Furniture Disassembly</option>
+            <option>Furniture Installation</option>
+            <option>Multiple Services</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="from">Moving From</label>
+          <input id="from" name="from" placeholder="Area or address">
+        </div>
+
+        <div class="field">
+          <label for="to">Moving To</label>
+          <input id="to" name="to" placeholder="Area or address">
+        </div>
+
+        <div class="field full">
+          <label for="message">Additional Details</label>
+          <textarea id="message" name="message"
+            placeholder="Property details, items or questions"></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn form-submit">
+        Prepare WhatsApp Enquiry →
+      </button>
+
+      <p class="form-disclaimer">
+        Your message will open in WhatsApp for you to review and send.
+        This demonstration form does not store data on a server.
+      </p>
+
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">Helpful information</span>
+      <h2>Questions to consider before your move.</h2>
+      <p>
+        Prepare these details when contacting the moving team.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>What information should I provide for a moving quote?</summary>
+        <p>
+          Share your moving date, pickup and destination locations,
+          type of property, approximate belongings and any packing,
+          storage or furniture handling requirements.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I enquire about home and office relocation?</summary>
+        <p>
+          Yes. Select the move type in the enquiry form or contact
+          the team directly to discuss a residential or commercial relocation.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do you provide packing and furniture handling support?</summary>
+        <p>
+          Anfal Movers lists furniture packing, disassembly and installation
+          among its services. Include the support you need in your enquiry.
+        </p>
+      </details>
+
+      <details>
+        <summary>Which areas do you cover?</summary>
+        <p>
+          The website lists Dubai, Abu Dhabi, Ajman, Ras Al Khaimah
+          and Al Ain. Contact the team to confirm arrangements for your locations.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I contact Anfal Movers?</summary>
+        <p>
+          Call +971 54 285 4152, send a WhatsApp message or email
+          info@anfalmovers.com.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <div>
+      <h2>Ready to take the next step?</h2>
+      <p>Share your moving details and start planning with Anfal Movers.</p>
+    </div>
+
+    <a href="#contact" class="btn btn-light">
+      Request a Moving Quote →
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <a class="brand" href="#home">
+          <span class="brand-mark">⌂</span>
+          <span>
+            ANFAL MOVERS
+            <small>MOVE WITH CONFIDENCE</small>
+          </span>
+        </a>
+
+        <p>
+          Moving and relocation support for homes, offices and businesses
+          across the UAE. Contact the team to discuss your moving requirements.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="#services">Moving Services</a>
+          <a href="#process">How It Works</a>
+          <a href="#coverage">Service Areas</a>
+          <a href="#faq">FAQs</a>
+          <a href="#contact">Request a Quote</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="tel:+971542854152">+971 54 285 4152</a>
+          <a href="https://wa.me/971542854152" target="_blank" rel="noopener">WhatsApp Anfal Movers</a>
+          <a href="mailto:info@anfalmovers.com">info@anfalmovers.com</a>
+          <a href="https://anfalmovers.com/contact/" target="_blank" rel="noopener">Current Website Contact Page</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Anfal Movers. All rights reserved.</span>
+      <span>Moving and relocation services across the UAE.</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- EXACTLY TWO MOBILE STICKY CONTACT BUTTONS -->
+<div class="mobile-sticky">
+  <a href="tel:+971542854152" class="btn btn-outline">Call Now</a>
+  <a href="https://wa.me/971542854152"
+     target="_blank" rel="noopener" class="btn">WhatsApp Us</a>
+</div>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById('menu-toggle');
+const navigation = document.getElementById('navigation');
+
+menuToggle.addEventListener('click', function () {
+  const open = navigation.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.textContent = open ? '×' : '☰';
+});
+
+navigation.querySelectorAll('a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    navigation.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  });
+});
+
+/* COPYRIGHT YEAR */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* WHATSAPP ENQUIRY FORM */
+document.getElementById('quote-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+
+  if (!form.reportValidity()) return;
+
+  const data = new FormData(form);
+
+  const message = [
+    'Hello Anfal Movers, I would like to request a moving quote.',
+    '',
+    'Name: ' + (data.get('name') || ''),
+    'Phone: ' + (data.get('phone') || ''),
+    'Email: ' + (data.get('email') || 'Not provided'),
+    'Preferred moving date: ' + (data.get('date') || 'Not decided'),
+    'Type of move: ' + (data.get('type') || ''),
+    'Additional support: ' + (data.get('extra') || 'Not specified'),
+    'Moving from: ' + (data.get('from') || 'Not provided'),
+    'Moving to: ' + (data.get('to') || 'Not provided'),
+    'Additional details: ' + (data.get('message') || 'None')
+  ].join('\n');
+
+  const whatsappURL =
+    'https://wa.me/971542854152?text=' + encodeURIComponent(message);
+
+  window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+});
+</script>
+
+</body>
+</html>
